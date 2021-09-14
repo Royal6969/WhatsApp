@@ -12,7 +12,7 @@ function Sidebar() {
       "Please enter an email address for the user you wish to chat with"
     );
     // if there is not input, stop execution
-    if(!input) return;
+    if(!input) return null;
 
     // check if the chat alredy exists
     // npm install email-validator
