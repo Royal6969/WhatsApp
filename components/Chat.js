@@ -9,7 +9,6 @@ import getRecipientEmail from '../utils/getRecipientEmail';
 function Chat({ id, users }) { // props distructured
 
     const router = useRouter();
-
     const [user] = useAuthState(auth);
 
     const [recipientSnapshot] = useCollection(
@@ -21,7 +20,6 @@ function Chat({ id, users }) { // props distructured
     };
 
     const recipient = recipientSnapshot?.docs?.[0]?.data();
-
     const recipientEmail = getRecipientEmail(users, user);
 
     return (
