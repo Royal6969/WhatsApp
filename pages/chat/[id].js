@@ -44,7 +44,7 @@ export async function getServerSideProps(context) { // server side rendering
         ...doc.data(),
     })).map((messages) => ({
         ...messages,
-        timestamp: messages.timestamp.toDate().getTime(),
+        timestamp: messages.timestamp.toDate().getTime(), // La propiedad 'timestamp' no existe en el tipo '{ id: string; }'
     }));
 
     // PREP the chats
